@@ -158,7 +158,6 @@
     var story = getFullStory();
     if (navigator.clipboard && window.isSecureContext) {
       navigator.clipboard.writeText(story).then(function () {
-        setText("copy-button-label", "Copied!");
         actionStatus.textContent = "Your fable has been copied.";
         copyButton.querySelector("span").textContent = "Copied to clipboard";
       }).catch(function () {
