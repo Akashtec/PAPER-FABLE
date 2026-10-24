@@ -19,7 +19,7 @@ const referencedIds = new Set([
 ].map((match) => match[1]));
 
 for (const id of referencedIds) {
-  assert.ok(ids.has(id), \`app.js references missing element id: \${id}\`);
+  assert.ok(ids.has(id), "app.js references missing element id: " + id);
 }
 
 for (const id of [
@@ -32,7 +32,7 @@ for (const id of [
   "story-title",
   "story-copy",
 ]) {
-  assert.ok(ids.has(id), \`Expected interactive/story element is missing: \${id}\`);
+  assert.ok(ids.has(id), "Expected interactive/story element is missing: " + id);
 }
 
 assert.match(js, /addEventListener\("submit"/, "story form should be interactive");
